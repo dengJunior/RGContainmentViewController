@@ -1,0 +1,778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		234B7FFD20A597F500B03DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B7FFC20A597F500B03DAB /* AppDelegate.swift */; };
+		234B7FFF20A597F500B03DAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B7FFE20A597F500B03DAB /* ViewController.swift */; };
+		234B800220A597F500B03DAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234B800020A597F500B03DAB /* Main.storyboard */; };
+		234B800520A597F500B03DAB /* RGContainmentViewController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 234B800320A597F500B03DAB /* RGContainmentViewController.xcdatamodeld */; };
+		234B800720A597F500B03DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234B800620A597F500B03DAB /* Assets.xcassets */; };
+		234B800A20A597F500B03DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234B800820A597F500B03DAB /* LaunchScreen.storyboard */; };
+		234B801520A597F600B03DAB /* RGContainmentViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B801420A597F600B03DAB /* RGContainmentViewControllerTests.swift */; };
+		234B802020A597F600B03DAB /* RGContainmentViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B801F20A597F600B03DAB /* RGContainmentViewControllerUITests.swift */; };
+		234B802F20A5984000B03DAB /* RGContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B802E20A5984000B03DAB /* RGContainerViewController.swift */; };
+		234B803120A5987B00B03DAB /* RGMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B803020A5987B00B03DAB /* RGMapViewController.swift */; };
+		234B803320A5988C00B03DAB /* RGGeoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B803220A5988C00B03DAB /* RGGeoInfoViewController.swift */; };
+		234B804020A5A01200B03DAB /* BaiduMapAPI_Location.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B803520A5A01200B03DAB /* BaiduMapAPI_Location.framework */; };
+		234B804120A5A01200B03DAB /* BaiduMapAPI_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B803620A5A01200B03DAB /* BaiduMapAPI_Map.framework */; };
+		234B804220A5A01200B03DAB /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B803820A5A01200B03DAB /* libcrypto.a */; };
+		234B804320A5A01200B03DAB /* libDataEncrypt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B803920A5A01200B03DAB /* libDataEncrypt.a */; };
+		234B804420A5A01200B03DAB /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B803A20A5A01200B03DAB /* libssl.a */; };
+		234B804520A5A01200B03DAB /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B803B20A5A01200B03DAB /* BaiduMapAPI_Utils.framework */; };
+		234B804620A5A01200B03DAB /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B803C20A5A01200B03DAB /* BaiduMapAPI_Base.framework */; };
+		234B804720A5A01200B03DAB /* BaiduMapAPI_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B803D20A5A01200B03DAB /* BaiduMapAPI_Search.framework */; };
+		234B804820A5A01200B03DAB /* BaiduMapAPI_Radar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B803E20A5A01200B03DAB /* BaiduMapAPI_Radar.framework */; };
+		234B804920A5A01200B03DAB /* BaiduMapAPI_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B803F20A5A01200B03DAB /* BaiduMapAPI_Cloud.framework */; };
+		234B804D20A5A04500B03DAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B804C20A5A03B00B03DAB /* Security.framework */; };
+		234B804E20A5A05500B03DAB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B804B20A5A03300B03DAB /* MessageUI.framework */; };
+		234B805020A5A06400B03DAB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B804F20A5A05F00B03DAB /* OpenGLES.framework */; };
+		234B805220A5A07C00B03DAB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B805120A5A06F00B03DAB /* QuartzCore.framework */; };
+		234B805420A5A09900B03DAB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B805320A5A09400B03DAB /* SystemConfiguration.framework */; };
+		234B805620A5A0A400B03DAB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B805520A5A0A400B03DAB /* libsqlite3.tbd */; };
+		234B805820A5A0B600B03DAB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B805720A5A0AF00B03DAB /* CoreTelephony.framework */; };
+		234B805A20A5A0BF00B03DAB /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B805920A5A0BF00B03DAB /* libstdc++.tbd */; };
+		234B805C20A5A0CD00B03DAB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B805B20A5A0C600B03DAB /* CoreLocation.framework */; };
+		234B806120A5A7C200B03DAB /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 234B806020A5A7C200B03DAB /* mapapi.bundle */; };
+		234B806B20A5A7E100B03DAB /* BMKClusterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B806320A5A7E100B03DAB /* BMKClusterItem.m */; };
+		234B806C20A5A7E100B03DAB /* BMKClusterQuadtree.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B806520A5A7E100B03DAB /* BMKClusterQuadtree.m */; };
+		234B806D20A5A7E100B03DAB /* BMKClusterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B806720A5A7E100B03DAB /* BMKClusterManager.m */; };
+		234B806E20A5A7E100B03DAB /* BMKClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B806920A5A7E100B03DAB /* BMKClusterAlgorithm.m */; };
+		234B807220A5A80B00B03DAB /* PromptInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B807120A5A80B00B03DAB /* PromptInfo.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		234B801120A597F500B03DAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 234B7FF120A597F500B03DAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 234B7FF820A597F500B03DAB;
+			remoteInfo = RGContainmentViewController;
+		};
+		234B801C20A597F600B03DAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 234B7FF120A597F500B03DAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 234B7FF820A597F500B03DAB;
+			remoteInfo = RGContainmentViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		234B7FF920A597F500B03DAB /* RGContainmentViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGContainmentViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		234B7FFC20A597F500B03DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		234B7FFE20A597F500B03DAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		234B800120A597F500B03DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		234B800420A597F500B03DAB /* RGContainmentViewController.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RGContainmentViewController.xcdatamodel; sourceTree = "<group>"; };
+		234B800620A597F500B03DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		234B800920A597F500B03DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		234B800B20A597F500B03DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		234B801020A597F500B03DAB /* RGContainmentViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RGContainmentViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		234B801420A597F600B03DAB /* RGContainmentViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGContainmentViewControllerTests.swift; sourceTree = "<group>"; };
+		234B801620A597F600B03DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		234B801B20A597F600B03DAB /* RGContainmentViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RGContainmentViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		234B801F20A597F600B03DAB /* RGContainmentViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGContainmentViewControllerUITests.swift; sourceTree = "<group>"; };
+		234B802120A597F600B03DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		234B802E20A5984000B03DAB /* RGContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGContainerViewController.swift; sourceTree = "<group>"; };
+		234B803020A5987B00B03DAB /* RGMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGMapViewController.swift; sourceTree = "<group>"; };
+		234B803220A5988C00B03DAB /* RGGeoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGGeoInfoViewController.swift; sourceTree = "<group>"; };
+		234B803520A5A01200B03DAB /* BaiduMapAPI_Location.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Location.framework; sourceTree = "<group>"; };
+		234B803620A5A01200B03DAB /* BaiduMapAPI_Map.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Map.framework; sourceTree = "<group>"; };
+		234B803820A5A01200B03DAB /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		234B803920A5A01200B03DAB /* libDataEncrypt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDataEncrypt.a; sourceTree = "<group>"; };
+		234B803A20A5A01200B03DAB /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		234B803B20A5A01200B03DAB /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
+		234B803C20A5A01200B03DAB /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
+		234B803D20A5A01200B03DAB /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
+		234B803E20A5A01200B03DAB /* BaiduMapAPI_Radar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Radar.framework; sourceTree = "<group>"; };
+		234B803F20A5A01200B03DAB /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
+		234B804B20A5A03300B03DAB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		234B804C20A5A03B00B03DAB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		234B804F20A5A05F00B03DAB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		234B805120A5A06F00B03DAB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		234B805320A5A09400B03DAB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		234B805520A5A0A400B03DAB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		234B805720A5A0AF00B03DAB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		234B805920A5A0BF00B03DAB /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		234B805B20A5A0C600B03DAB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		234B805E20A5A6A600B03DAB /* BMKSwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMKSwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		234B806020A5A7C200B03DAB /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
+		234B806320A5A7E100B03DAB /* BMKClusterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMKClusterItem.m; sourceTree = "<group>"; };
+		234B806420A5A7E100B03DAB /* BMKClusterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKClusterManager.h; sourceTree = "<group>"; };
+		234B806520A5A7E100B03DAB /* BMKClusterQuadtree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMKClusterQuadtree.m; sourceTree = "<group>"; };
+		234B806620A5A7E100B03DAB /* BMKClusterAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKClusterAlgorithm.h; sourceTree = "<group>"; };
+		234B806720A5A7E100B03DAB /* BMKClusterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMKClusterManager.m; sourceTree = "<group>"; };
+		234B806820A5A7E100B03DAB /* BMKClusterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKClusterItem.h; sourceTree = "<group>"; };
+		234B806920A5A7E100B03DAB /* BMKClusterAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMKClusterAlgorithm.m; sourceTree = "<group>"; };
+		234B806A20A5A7E100B03DAB /* BMKClusterQuadtree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKClusterQuadtree.h; sourceTree = "<group>"; };
+		234B807020A5A80B00B03DAB /* PromptInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromptInfo.h; sourceTree = "<group>"; };
+		234B807120A5A80B00B03DAB /* PromptInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromptInfo.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		234B7FF620A597F500B03DAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				234B805C20A5A0CD00B03DAB /* CoreLocation.framework in Frameworks */,
+				234B805820A5A0B600B03DAB /* CoreTelephony.framework in Frameworks */,
+				234B805420A5A09900B03DAB /* SystemConfiguration.framework in Frameworks */,
+				234B805220A5A07C00B03DAB /* QuartzCore.framework in Frameworks */,
+				234B805620A5A0A400B03DAB /* libsqlite3.tbd in Frameworks */,
+				234B805020A5A06400B03DAB /* OpenGLES.framework in Frameworks */,
+				234B804E20A5A05500B03DAB /* MessageUI.framework in Frameworks */,
+				234B804D20A5A04500B03DAB /* Security.framework in Frameworks */,
+				234B804420A5A01200B03DAB /* libssl.a in Frameworks */,
+				234B804020A5A01200B03DAB /* BaiduMapAPI_Location.framework in Frameworks */,
+				234B804920A5A01200B03DAB /* BaiduMapAPI_Cloud.framework in Frameworks */,
+				234B804720A5A01200B03DAB /* BaiduMapAPI_Search.framework in Frameworks */,
+				234B804520A5A01200B03DAB /* BaiduMapAPI_Utils.framework in Frameworks */,
+				234B804320A5A01200B03DAB /* libDataEncrypt.a in Frameworks */,
+				234B804620A5A01200B03DAB /* BaiduMapAPI_Base.framework in Frameworks */,
+				234B805A20A5A0BF00B03DAB /* libstdc++.tbd in Frameworks */,
+				234B804120A5A01200B03DAB /* BaiduMapAPI_Map.framework in Frameworks */,
+				234B804820A5A01200B03DAB /* BaiduMapAPI_Radar.framework in Frameworks */,
+				234B804220A5A01200B03DAB /* libcrypto.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234B800D20A597F500B03DAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234B801820A597F600B03DAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		234B7FF020A597F500B03DAB = {
+			isa = PBXGroup;
+			children = (
+				234B7FFB20A597F500B03DAB /* RGContainmentViewController */,
+				234B801320A597F600B03DAB /* RGContainmentViewControllerTests */,
+				234B801E20A597F600B03DAB /* RGContainmentViewControllerUITests */,
+				234B7FFA20A597F500B03DAB /* Products */,
+				234B804A20A5A03300B03DAB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		234B7FFA20A597F500B03DAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				234B7FF920A597F500B03DAB /* RGContainmentViewController.app */,
+				234B801020A597F500B03DAB /* RGContainmentViewControllerTests.xctest */,
+				234B801B20A597F600B03DAB /* RGContainmentViewControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		234B7FFB20A597F500B03DAB /* RGContainmentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				234B7FFC20A597F500B03DAB /* AppDelegate.swift */,
+				234B800620A597F500B03DAB /* Assets.xcassets */,
+				234B803420A5A01200B03DAB /* BaiduMapAPI */,
+				234B805E20A5A6A600B03DAB /* BMKSwiftDemo-Bridging-Header.h */,
+				234B800B20A597F500B03DAB /* Info.plist */,
+				234B800820A597F500B03DAB /* LaunchScreen.storyboard */,
+				234B800020A597F500B03DAB /* Main.storyboard */,
+				234B800320A597F500B03DAB /* RGContainmentViewController.xcdatamodeld */,
+				234B7FFE20A597F500B03DAB /* ViewController.swift */,
+				234B802D20A5982D00B03DAB /* ViewControllers */,
+			);
+			path = RGContainmentViewController;
+			sourceTree = "<group>";
+		};
+		234B801320A597F600B03DAB /* RGContainmentViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				234B801420A597F600B03DAB /* RGContainmentViewControllerTests.swift */,
+				234B801620A597F600B03DAB /* Info.plist */,
+			);
+			path = RGContainmentViewControllerTests;
+			sourceTree = "<group>";
+		};
+		234B801E20A597F600B03DAB /* RGContainmentViewControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				234B801F20A597F600B03DAB /* RGContainmentViewControllerUITests.swift */,
+				234B802120A597F600B03DAB /* Info.plist */,
+			);
+			path = RGContainmentViewControllerUITests;
+			sourceTree = "<group>";
+		};
+		234B802D20A5982D00B03DAB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				234B802E20A5984000B03DAB /* RGContainerViewController.swift */,
+				234B803020A5987B00B03DAB /* RGMapViewController.swift */,
+				234B803220A5988C00B03DAB /* RGGeoInfoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		234B803420A5A01200B03DAB /* BaiduMapAPI */ = {
+			isa = PBXGroup;
+			children = (
+				234B806F20A5A80B00B03DAB /* PromptInfo */,
+				234B806220A5A7E100B03DAB /* Cluster */,
+				234B805F20A5A7C200B03DAB /* Resources */,
+				234B803520A5A01200B03DAB /* BaiduMapAPI_Location.framework */,
+				234B803620A5A01200B03DAB /* BaiduMapAPI_Map.framework */,
+				234B803720A5A01200B03DAB /* thirdlibs */,
+				234B803B20A5A01200B03DAB /* BaiduMapAPI_Utils.framework */,
+				234B803C20A5A01200B03DAB /* BaiduMapAPI_Base.framework */,
+				234B803D20A5A01200B03DAB /* BaiduMapAPI_Search.framework */,
+				234B803E20A5A01200B03DAB /* BaiduMapAPI_Radar.framework */,
+				234B803F20A5A01200B03DAB /* BaiduMapAPI_Cloud.framework */,
+			);
+			path = BaiduMapAPI;
+			sourceTree = "<group>";
+		};
+		234B803720A5A01200B03DAB /* thirdlibs */ = {
+			isa = PBXGroup;
+			children = (
+				234B803820A5A01200B03DAB /* libcrypto.a */,
+				234B803920A5A01200B03DAB /* libDataEncrypt.a */,
+				234B803A20A5A01200B03DAB /* libssl.a */,
+			);
+			path = thirdlibs;
+			sourceTree = "<group>";
+		};
+		234B804A20A5A03300B03DAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				234B805B20A5A0C600B03DAB /* CoreLocation.framework */,
+				234B805920A5A0BF00B03DAB /* libstdc++.tbd */,
+				234B805720A5A0AF00B03DAB /* CoreTelephony.framework */,
+				234B805520A5A0A400B03DAB /* libsqlite3.tbd */,
+				234B805320A5A09400B03DAB /* SystemConfiguration.framework */,
+				234B805120A5A06F00B03DAB /* QuartzCore.framework */,
+				234B804F20A5A05F00B03DAB /* OpenGLES.framework */,
+				234B804C20A5A03B00B03DAB /* Security.framework */,
+				234B804B20A5A03300B03DAB /* MessageUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		234B805F20A5A7C200B03DAB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				234B806020A5A7C200B03DAB /* mapapi.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		234B806220A5A7E100B03DAB /* Cluster */ = {
+			isa = PBXGroup;
+			children = (
+				234B806320A5A7E100B03DAB /* BMKClusterItem.m */,
+				234B806420A5A7E100B03DAB /* BMKClusterManager.h */,
+				234B806520A5A7E100B03DAB /* BMKClusterQuadtree.m */,
+				234B806620A5A7E100B03DAB /* BMKClusterAlgorithm.h */,
+				234B806720A5A7E100B03DAB /* BMKClusterManager.m */,
+				234B806820A5A7E100B03DAB /* BMKClusterItem.h */,
+				234B806920A5A7E100B03DAB /* BMKClusterAlgorithm.m */,
+				234B806A20A5A7E100B03DAB /* BMKClusterQuadtree.h */,
+			);
+			path = Cluster;
+			sourceTree = "<group>";
+		};
+		234B806F20A5A80B00B03DAB /* PromptInfo */ = {
+			isa = PBXGroup;
+			children = (
+				234B807020A5A80B00B03DAB /* PromptInfo.h */,
+				234B807120A5A80B00B03DAB /* PromptInfo.m */,
+			);
+			path = PromptInfo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		234B7FF820A597F500B03DAB /* RGContainmentViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 234B802420A597F600B03DAB /* Build configuration list for PBXNativeTarget "RGContainmentViewController" */;
+			buildPhases = (
+				234B7FF520A597F500B03DAB /* Sources */,
+				234B7FF620A597F500B03DAB /* Frameworks */,
+				234B7FF720A597F500B03DAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RGContainmentViewController;
+			productName = RGContainmentViewController;
+			productReference = 234B7FF920A597F500B03DAB /* RGContainmentViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		234B800F20A597F500B03DAB /* RGContainmentViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 234B802720A597F600B03DAB /* Build configuration list for PBXNativeTarget "RGContainmentViewControllerTests" */;
+			buildPhases = (
+				234B800C20A597F500B03DAB /* Sources */,
+				234B800D20A597F500B03DAB /* Frameworks */,
+				234B800E20A597F500B03DAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				234B801220A597F500B03DAB /* PBXTargetDependency */,
+			);
+			name = RGContainmentViewControllerTests;
+			productName = RGContainmentViewControllerTests;
+			productReference = 234B801020A597F500B03DAB /* RGContainmentViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		234B801A20A597F600B03DAB /* RGContainmentViewControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 234B802A20A597F600B03DAB /* Build configuration list for PBXNativeTarget "RGContainmentViewControllerUITests" */;
+			buildPhases = (
+				234B801720A597F600B03DAB /* Sources */,
+				234B801820A597F600B03DAB /* Frameworks */,
+				234B801920A597F600B03DAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				234B801D20A597F600B03DAB /* PBXTargetDependency */,
+			);
+			name = RGContainmentViewControllerUITests;
+			productName = RGContainmentViewControllerUITests;
+			productReference = 234B801B20A597F600B03DAB /* RGContainmentViewControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		234B7FF120A597F500B03DAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = dengjiangzhou;
+				TargetAttributes = {
+					234B7FF820A597F500B03DAB = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					234B800F20A597F500B03DAB = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 234B7FF820A597F500B03DAB;
+					};
+					234B801A20A597F600B03DAB = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 234B7FF820A597F500B03DAB;
+					};
+				};
+			};
+			buildConfigurationList = 234B7FF420A597F500B03DAB /* Build configuration list for PBXProject "RGContainmentViewController" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 234B7FF020A597F500B03DAB;
+			productRefGroup = 234B7FFA20A597F500B03DAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				234B7FF820A597F500B03DAB /* RGContainmentViewController */,
+				234B800F20A597F500B03DAB /* RGContainmentViewControllerTests */,
+				234B801A20A597F600B03DAB /* RGContainmentViewControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		234B7FF720A597F500B03DAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				234B800A20A597F500B03DAB /* LaunchScreen.storyboard in Resources */,
+				234B806120A5A7C200B03DAB /* mapapi.bundle in Resources */,
+				234B800720A597F500B03DAB /* Assets.xcassets in Resources */,
+				234B800220A597F500B03DAB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234B800E20A597F500B03DAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234B801920A597F600B03DAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		234B7FF520A597F500B03DAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				234B800520A597F500B03DAB /* RGContainmentViewController.xcdatamodeld in Sources */,
+				234B803320A5988C00B03DAB /* RGGeoInfoViewController.swift in Sources */,
+				234B806B20A5A7E100B03DAB /* BMKClusterItem.m in Sources */,
+				234B803120A5987B00B03DAB /* RGMapViewController.swift in Sources */,
+				234B802F20A5984000B03DAB /* RGContainerViewController.swift in Sources */,
+				234B806E20A5A7E100B03DAB /* BMKClusterAlgorithm.m in Sources */,
+				234B807220A5A80B00B03DAB /* PromptInfo.m in Sources */,
+				234B7FFF20A597F500B03DAB /* ViewController.swift in Sources */,
+				234B806C20A5A7E100B03DAB /* BMKClusterQuadtree.m in Sources */,
+				234B7FFD20A597F500B03DAB /* AppDelegate.swift in Sources */,
+				234B806D20A5A7E100B03DAB /* BMKClusterManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234B800C20A597F500B03DAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				234B801520A597F600B03DAB /* RGContainmentViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234B801720A597F600B03DAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				234B802020A597F600B03DAB /* RGContainmentViewControllerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		234B801220A597F500B03DAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 234B7FF820A597F500B03DAB /* RGContainmentViewController */;
+			targetProxy = 234B801120A597F500B03DAB /* PBXContainerItemProxy */;
+		};
+		234B801D20A597F600B03DAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 234B7FF820A597F500B03DAB /* RGContainmentViewController */;
+			targetProxy = 234B801C20A597F600B03DAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		234B800020A597F500B03DAB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				234B800120A597F500B03DAB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		234B800820A597F500B03DAB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				234B800920A597F500B03DAB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		234B802220A597F600B03DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		234B802320A597F600B03DAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		234B802520A597F600B03DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZPF2ERCW9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RGContainmentViewController/BaiduMapAPI",
+				);
+				INFOPLIST_FILE = RGContainmentViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RGContainmentViewController/BaiduMapAPI/thirdlibs",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dengjiangzhou.RGContainmentViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RGContainmentViewController/BMKSwiftDemo-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		234B802620A597F600B03DAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZPF2ERCW9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RGContainmentViewController/BaiduMapAPI",
+				);
+				INFOPLIST_FILE = RGContainmentViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RGContainmentViewController/BaiduMapAPI/thirdlibs",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dengjiangzhou.RGContainmentViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RGContainmentViewController/BMKSwiftDemo-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		234B802820A597F600B03DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZPF2ERCW9;
+				INFOPLIST_FILE = RGContainmentViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dengjiangzhou.RGContainmentViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RGContainmentViewController.app/RGContainmentViewController";
+			};
+			name = Debug;
+		};
+		234B802920A597F600B03DAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZPF2ERCW9;
+				INFOPLIST_FILE = RGContainmentViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dengjiangzhou.RGContainmentViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RGContainmentViewController.app/RGContainmentViewController";
+			};
+			name = Release;
+		};
+		234B802B20A597F600B03DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZPF2ERCW9;
+				INFOPLIST_FILE = RGContainmentViewControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dengjiangzhou.RGContainmentViewControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RGContainmentViewController;
+			};
+			name = Debug;
+		};
+		234B802C20A597F600B03DAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZPF2ERCW9;
+				INFOPLIST_FILE = RGContainmentViewControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dengjiangzhou.RGContainmentViewControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RGContainmentViewController;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		234B7FF420A597F500B03DAB /* Build configuration list for PBXProject "RGContainmentViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				234B802220A597F600B03DAB /* Debug */,
+				234B802320A597F600B03DAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		234B802420A597F600B03DAB /* Build configuration list for PBXNativeTarget "RGContainmentViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				234B802520A597F600B03DAB /* Debug */,
+				234B802620A597F600B03DAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		234B802720A597F600B03DAB /* Build configuration list for PBXNativeTarget "RGContainmentViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				234B802820A597F600B03DAB /* Debug */,
+				234B802920A597F600B03DAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		234B802A20A597F600B03DAB /* Build configuration list for PBXNativeTarget "RGContainmentViewControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				234B802B20A597F600B03DAB /* Debug */,
+				234B802C20A597F600B03DAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		234B800320A597F500B03DAB /* RGContainmentViewController.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				234B800420A597F500B03DAB /* RGContainmentViewController.xcdatamodel */,
+			);
+			currentVersion = 234B800420A597F500B03DAB /* RGContainmentViewController.xcdatamodel */;
+			path = RGContainmentViewController.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 234B7FF120A597F500B03DAB /* Project object */;
+}

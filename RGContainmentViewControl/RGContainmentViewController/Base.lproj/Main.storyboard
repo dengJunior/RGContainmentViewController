@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Container View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RGContainerViewController" customModule="RGContainmentViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gs-0s-CCa" userLabel="topContainer">
+                                <rect key="frame" x="0.0" y="20" width="375" height="280"/>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7M-ZJ-zO2" userLabel="bottomContainer">
+                                <rect key="frame" x="0.0" y="387" width="375" height="280"/>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejr-xY-eJh" userLabel="infoButton">
+                                <rect key="frame" x="174" y="330.5" width="27" height="27"/>
+                                <state key="normal" image="radar"/>
+                                <connections>
+                                    <action selector="infoButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DsM-Aq-UNP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8gs-0s-CCa" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.42" id="0zu-0t-ZkP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u7M-ZJ-zO2" secondAttribute="trailing" id="8rk-e9-rHh"/>
+                            <constraint firstItem="ejr-xY-eJh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UAN-hw-xRE"/>
+                            <constraint firstItem="u7M-ZJ-zO2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.42" id="WuY-kh-Ems"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u7M-ZJ-zO2" secondAttribute="bottom" id="Xfk-5s-eyq"/>
+                            <constraint firstItem="8gs-0s-CCa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YEt-Nb-crD"/>
+                            <constraint firstItem="ejr-xY-eJh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="bzJ-EU-iY2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8gs-0s-CCa" secondAttribute="trailing" id="vxx-u4-8kb"/>
+                            <constraint firstItem="8gs-0s-CCa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wnc-3Z-UiI"/>
+                            <constraint firstItem="u7M-ZJ-zO2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xi7-v7-3ms"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomContainer" destination="u7M-ZJ-zO2" id="sxh-HT-ZhY"/>
+                        <outlet property="topContainer" destination="8gs-0s-CCa" id="9Dx-nD-AKc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="radar" width="27" height="27"/>
+    </resources>
+</document>
