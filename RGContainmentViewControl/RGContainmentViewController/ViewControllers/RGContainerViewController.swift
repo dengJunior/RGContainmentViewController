@@ -8,6 +8,23 @@
 
 import UIKit
 
+struct value_coordinates {
+  /*  let lati = 121.53
+    let longi = 31.22
+ 
+     
+     // 我日蚜， 经纬度 写反了
+     
+ */
+    
+    let lati = 31.22
+    let longi = 121.53
+    
+}
+
+
+
+
 class RGContainerViewController: ViewController {
 
     
@@ -15,9 +32,22 @@ class RGContainerViewController: ViewController {
     
     @IBOutlet weak var bottomContainer: UIView!
     
-    let startMapViewController = RGMapViewController()
+    let startMapViewController = { () -> RGMapViewController in  
+        let viewController = RGMapViewController()
+        viewController.annotationImageName = "man"
+        
+        //  "man"
+        
+        //  "x"
+        return viewController
+    }()
     
-    let targetMapViewController = RGMapViewController()
+    let targetMapViewController = { () -> RGMapViewController in
+        let viewController = RGMapViewController()
+        viewController.annotationImageName = "x"
+        return viewController
+    }()
+
     
     let startGeoViewController = RGGeoInfoViewController()
     
@@ -32,11 +62,24 @@ class RGContainerViewController: ViewController {
         startGeoViewController.didMove(toParentViewController: self)
         
         self.addChildViewController(targetMapViewController)
-        topContainer.addSubview(targetMapViewController.view)
+        bottomContainer.addSubview(targetMapViewController.view)
         targetMapViewController.didMove(toParentViewController: self)
-        targetMapViewController.updatePositionY()
-        // 要注意的 真多， 直接这样， 一个 controller 多地图， 地图无法滚动。
-        // 直接的 多开， 不行是吧
+       // targetMapViewController.updatePositionY()         //  20180514 ， 这行代码， 大可不必
+        // 要注意的 真多， 直接这样， 一个 controller 多地图， 地图无法滚动。   20180513
+        // 直接的 多开， 不行是吧         20180513   ,            20180514   qu qu qu
+        
+        
+        //  let initialLocation = CLLocation(latitude: 56.55, longitude: 8.316667)  不用 国外的
+        
+        let initialLocation = CLLocation(latitude: value_coordinates().lati , longitude: value_coordinates().longi) // 用上海的
+        //      https://jingwei.supfree.net/mengzi.asp?id=824
+        
+        
+        
+        startMapViewController.updateAnnotationLocation(locate: initialLocation)
+        targetMapViewController.updateAnnotationLocation(locate: initialLocation.antipode())
+        
+        
         
         topContainer.decorateLayer(2)
         bottomContainer.decorateLayer(-2)

@@ -214,7 +214,7 @@ static CGFloat PromptDefaultTopOffSet = 0.f;
             }
             else
             {
-                BOOL firstIn=NO;
+                BOOL firstIn = NO;
                 [toast initWithText:text_ firstIn:firstIn];
             }
             [toast setDuration:duration_];

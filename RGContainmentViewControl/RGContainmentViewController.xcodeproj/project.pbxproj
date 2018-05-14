@@ -43,6 +43,9 @@
 		234B806D20A5A7E100B03DAB /* BMKClusterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B806720A5A7E100B03DAB /* BMKClusterManager.m */; };
 		234B806E20A5A7E100B03DAB /* BMKClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B806920A5A7E100B03DAB /* BMKClusterAlgorithm.m */; };
 		234B807220A5A80B00B03DAB /* PromptInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B807120A5A80B00B03DAB /* PromptInfo.m */; };
+		23A6598C20A9331900360828 /* CLLocation+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6598B20A9331900360828 /* CLLocation+Utilities.swift */; };
+		23A6598F20A937C000360828 /* RGAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6598E20A937C000360828 /* RGAnnotation.swift */; };
+		23A6599220A947AC00360828 /* RGAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6599120A947AC00360828 /* RGAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,9 @@
 		234B806A20A5A7E100B03DAB /* BMKClusterQuadtree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKClusterQuadtree.h; sourceTree = "<group>"; };
 		234B807020A5A80B00B03DAB /* PromptInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromptInfo.h; sourceTree = "<group>"; };
 		234B807120A5A80B00B03DAB /* PromptInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromptInfo.m; sourceTree = "<group>"; };
+		23A6598B20A9331900360828 /* CLLocation+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Utilities.swift"; sourceTree = "<group>"; };
+		23A6598E20A937C000360828 /* RGAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGAnnotation.swift; sourceTree = "<group>"; };
+		23A6599120A947AC00360828 /* RGAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,15 +187,18 @@
 		234B7FFB20A597F500B03DAB /* RGContainmentViewController */ = {
 			isa = PBXGroup;
 			children = (
-				234B7FFC20A597F500B03DAB /* AppDelegate.swift */,
-				234B800620A597F500B03DAB /* Assets.xcassets */,
-				234B803420A5A01200B03DAB /* BaiduMapAPI */,
+				23A6599020A9479200360828 /* Views */,
+				23A6598D20A9379A00360828 /* Models */,
 				234B805E20A5A6A600B03DAB /* BMKSwiftDemo-Bridging-Header.h */,
 				234B800B20A597F500B03DAB /* Info.plist */,
+				234B7FFC20A597F500B03DAB /* AppDelegate.swift */,
+				234B7FFE20A597F500B03DAB /* ViewController.swift */,
+				234B800620A597F500B03DAB /* Assets.xcassets */,
+				234B803420A5A01200B03DAB /* BaiduMapAPI */,
+				23A6598A20A9331900360828 /* Extensions */,
 				234B800820A597F500B03DAB /* LaunchScreen.storyboard */,
 				234B800020A597F500B03DAB /* Main.storyboard */,
 				234B800320A597F500B03DAB /* RGContainmentViewController.xcdatamodeld */,
-				234B7FFE20A597F500B03DAB /* ViewController.swift */,
 				234B802D20A5982D00B03DAB /* ViewControllers */,
 			);
 			path = RGContainmentViewController;
@@ -297,6 +306,30 @@
 				234B807120A5A80B00B03DAB /* PromptInfo.m */,
 			);
 			path = PromptInfo;
+			sourceTree = "<group>";
+		};
+		23A6598A20A9331900360828 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				23A6598B20A9331900360828 /* CLLocation+Utilities.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		23A6598D20A9379A00360828 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23A6598E20A937C000360828 /* RGAnnotation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		23A6599020A9479200360828 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				23A6599120A947AC00360828 /* RGAnnotationView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,10 +471,13 @@
 				234B803320A5988C00B03DAB /* RGGeoInfoViewController.swift in Sources */,
 				234B806B20A5A7E100B03DAB /* BMKClusterItem.m in Sources */,
 				234B803120A5987B00B03DAB /* RGMapViewController.swift in Sources */,
+				23A6598F20A937C000360828 /* RGAnnotation.swift in Sources */,
 				234B802F20A5984000B03DAB /* RGContainerViewController.swift in Sources */,
 				234B806E20A5A7E100B03DAB /* BMKClusterAlgorithm.m in Sources */,
 				234B807220A5A80B00B03DAB /* PromptInfo.m in Sources */,
+				23A6599220A947AC00360828 /* RGAnnotationView.swift in Sources */,
 				234B7FFF20A597F500B03DAB /* ViewController.swift in Sources */,
+				23A6598C20A9331900360828 /* CLLocation+Utilities.swift in Sources */,
 				234B806C20A5A7E100B03DAB /* BMKClusterQuadtree.m in Sources */,
 				234B7FFD20A597F500B03DAB /* AppDelegate.swift in Sources */,
 				234B806D20A5A7E100B03DAB /* BMKClusterManager.m in Sources */,
