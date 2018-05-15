@@ -29,15 +29,6 @@ RGContainmentViewController forObjC
 
 
 
-<hr>
-
-
-> git push git@deng_junior:dengJunior/RGContainmentViewController.git
-
-
-
-<hr>
-
 
 
 

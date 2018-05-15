@@ -125,13 +125,15 @@ class RGContainerViewController: ViewController {
         DispatchQueue.main.asyncAfter(deadline: delayTime) {
           //  let centerPoint = fromController.view.center
             toViewController.view.frame = fromController.view.frame
+            fromController.willMove(toParentViewController: nil)
+            
             self.addChildViewController(toViewController)
             if isBottomView{
                 if self.bottomContainer.subviews.contains(toViewController.view){
                     print("Amazing")
                 }
                 else{
-                    self.bottomContainer.addSubview(toViewController.view)
+                  //  self.bottomContainer.addSubview(toViewController.view)
                 }
                 
             }
@@ -141,12 +143,12 @@ class RGContainerViewController: ViewController {
                     print("Amazing topContainer")
                 }
                 else{
-                    self.topContainer.addSubview(toViewController.view)
+                //    self.topContainer.addSubview(toViewController.view)
                 }
             }
             
        //     toViewController.view.frame = CGRect(origin: centerPoint, size: CGSize(width: 0, height: 0))
-            fromController.willMove(toParentViewController: nil)
+            
             self.transition(from: fromController, to: toViewController, duration: 0.2, options: [direction, .curveEaseIn] , animations: {
                 
             //    toViewController.view.frame = fromController.view.bounds
@@ -162,7 +164,13 @@ class RGContainerViewController: ViewController {
                 
                 toViewController.didMove(toParentViewController: self)
                 fromController.removeFromParentViewController()
-      
+                
+                /*
+                 RGContainmentViewController[17224:644505] Unbalanced calls to begin/end appearance transitions for <RGContainmentViewController.RGGeoInfoViewController: 0x7ff2eb513890>.
+                 */
+                
+                
+                
                 self.infoButton.isEnabled = true
             })
             
