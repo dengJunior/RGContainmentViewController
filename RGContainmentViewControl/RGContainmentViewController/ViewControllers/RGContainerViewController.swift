@@ -32,6 +32,10 @@ class RGContainerViewController: ViewController {
     
     @IBOutlet weak var bottomContainer: UIView!
     
+    
+    @IBOutlet weak var infoButton: UIButton!
+    
+    
     let startMapViewController = { () -> RGMapViewController in  
         let viewController = RGMapViewController()
         viewController.annotationImageName = "man"
@@ -47,7 +51,7 @@ class RGContainerViewController: ViewController {
         viewController.annotationImageName = "x"
         return viewController
     }()
-
+    let delay = 0.2
     
     let startGeoViewController = RGGeoInfoViewController()
     
@@ -91,8 +95,25 @@ class RGContainerViewController: ViewController {
     
     @IBAction func infoButtonHandler(_ sender: UIButton) {
         
-        
-        
+        sender.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay * 2) {
+            self.infoButton.isEnabled = true
+        }
+        var animationDirection = UIViewAnimationOptions.transitionFlipFromTop
+        if startMapViewController.parent == self{
+            startGeoViewController.location = startMapViewController.currentLocation
+            targetGeoViewController.location = targetMapViewController.currentLocation
+            dng_flipFromViewController(startMapViewController, toViewController: startGeoViewController, direction: animationDirection, delayTime: .now() ,isBottomView: false)
+           // topContainer.addSubview(startGeoViewController.view)
+            dng_flipFromViewController(targetMapViewController, toViewController: targetGeoViewController, direction: animationDirection, delayTime: .now() + delay ,isBottomView: true)
+           // bottomContainer.addSubview(targetGeoViewController.view)
+        }
+        else{
+            animationDirection = .transitionFlipFromBottom
+            dng_flipFromViewController(startGeoViewController, toViewController: startMapViewController, direction: animationDirection, delayTime: .now() ,isBottomView: false)
+            dng_flipFromViewController(targetGeoViewController, toViewController: targetMapViewController, direction: animationDirection, delayTime: .now() + delay ,isBottomView: true)
+            
+        }
         
         
         
@@ -100,7 +121,58 @@ class RGContainerViewController: ViewController {
     
     
     
-    
+    func dng_flipFromViewController(_ fromController: UIViewController, toViewController: UIViewController, direction: UIViewAnimationOptions , delayTime: DispatchTime , isBottomView: Bool){
+        DispatchQueue.main.asyncAfter(deadline: delayTime) {
+          //  let centerPoint = fromController.view.center
+            toViewController.view.frame = fromController.view.frame
+            self.addChildViewController(toViewController)
+            if isBottomView{
+                if self.bottomContainer.subviews.contains(toViewController.view){
+                    print("Amazing")
+                }
+                else{
+                    self.bottomContainer.addSubview(toViewController.view)
+                }
+                
+            }
+            else{
+                
+                if self.topContainer.subviews.contains(toViewController.view){
+                    print("Amazing topContainer")
+                }
+                else{
+                    self.topContainer.addSubview(toViewController.view)
+                }
+            }
+            
+       //     toViewController.view.frame = CGRect(origin: centerPoint, size: CGSize(width: 0, height: 0))
+            fromController.willMove(toParentViewController: nil)
+            self.transition(from: fromController, to: toViewController, duration: 0.2, options: [direction, .curveEaseIn] , animations: {
+                
+            //    toViewController.view.frame = fromController.view.bounds
+                // 换成
+                //  toViewController.view.frame = fromController.view.bounds
+                // 可好玩了
+                
+                
+                
+              //  fromController.view.frame = CGRect(origin: centerPoint, size: CGSize(width: 0, height: 0))
+                
+            }, completion: { _ in
+                
+                toViewController.didMove(toParentViewController: self)
+                fromController.removeFromParentViewController()
+      
+                self.infoButton.isEnabled = true
+            })
+            
+            
+        }
+        
+        
+        
+        
+    }
     
     
     

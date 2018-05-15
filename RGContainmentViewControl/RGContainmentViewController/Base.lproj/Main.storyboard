@@ -50,6 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomContainer" destination="u7M-ZJ-zO2" id="sxh-HT-ZhY"/>
+                        <outlet property="infoButton" destination="ejr-xY-eJh" id="0Pf-ye-ste"/>
                         <outlet property="topContainer" destination="8gs-0s-CCa" id="9Dx-nD-AKc"/>
                     </connections>
                 </viewController>

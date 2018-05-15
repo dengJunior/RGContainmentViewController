@@ -55,7 +55,6 @@ class RGMapViewController: ViewController {
         let annotation = mapView_baidu.annotations.last as! RGAnnotation
         annotation.updateCoordinate(newCoordinate: location.coordinate)
         snapToLocation(loc: location)
-        
         currentLocation = location
     }
     
